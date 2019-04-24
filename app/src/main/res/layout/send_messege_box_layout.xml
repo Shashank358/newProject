@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/all_containt_relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+            android:id="@+id/camera_attach_relative"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="false"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="3dp"
+            android:background="@drawable/chat_box_send_image_back"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/chat_box_camera_imageview"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_camera_enhance_black_24dp"
+                android:tint="@android:color/background_light" />
+
+            <ImageView
+                android:id="@+id/chat_box_attach_imageview"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="15dp"
+                android:layout_toEndOf="@+id/chat_box_camera_imageview"
+                android:rotation="30"
+                android:src="@drawable/ic_attach_file_black_24dp"
+                android:tint="@android:color/background_light" />
+
+
+        </RelativeLayout>
+
+
+        <ImageView
+            android:id="@+id/send_msg_imageview"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/chat_box_send_image_back"
+            android:paddingStart="8dp"
+            android:paddingTop="3dp"
+            android:paddingEnd="5dp"
+            android:paddingBottom="3dp"
+            android:src="@drawable/ic_send_black_24dp"
+            android:tint="@android:color/background_light"
+            android:visibility="gone" />
+
+
+        <ImageView
+            android:id="@+id/send_audio_imgeview"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/chat_box_send_image_back"
+            android:paddingStart="5dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="5dp"
+            android:paddingBottom="3dp"
+            android:src="@drawable/ic_mic_black_24dp"
+            android:tint="@android:color/background_light"
+            android:visibility="visible" />
+
+        <RelativeLayout
+            android:id="@+id/send_msg_view_relative"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="false"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="1dp"
+            android:layout_toRightOf="@+id/camera_attach_relative">
+
+            <EditText
+                android:id="@+id/send_msg_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:background="@drawable/chat_box_background"
+                android:hint="Type a messege..."
+                android:paddingStart="40dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="12dp" />
+
+            <ImageView
+                android:id="@+id/emoji_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                app:srcCompat="@drawable/ic_insert_emoticon_black_24dp" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+</merge>

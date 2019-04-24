@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChatImgShowActivity">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/chat_image_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/tabLayoutColor"
+        android:theme="@style/ThemeOverlay.AppCompat.Light"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark">
+
+        <include layout="@layout/img_prev_toolbar_content"
+            android:id="@+id/image_prev_toolbar"/>
+
+    </android.support.v7.widget.Toolbar>
+
+    <ImageView
+        android:layout_below="@+id/chat_image_toolbar"
+        android:id="@+id/user_chat_sent_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/send_content"
+        android:adjustViewBounds="true"
+        android:foregroundGravity="center"
+        android:src="@drawable/splash" />
+
+
+    <RelativeLayout
+        android:id="@+id/send_content"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp">
+
+
+        <ImageView
+            android:id="@+id/send_image_to_chat"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/chat_box_send_image_back"
+            android:elevation="10dp"
+            android:paddingStart="5dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="1dp"
+            android:paddingBottom="8dp"
+            android:tint="@android:color/background_light"
+            app:srcCompat="@drawable/ic_send_black_24dp" />
+
+        <ImageView
+            android:id="@+id/image_view_filter"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignBottom="@+id/send_image_to_chat"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="20dp"
+            app:srcCompat="@drawable/icon_image_filter" />
+
+        <ImageView
+            android:id="@+id/image_view_draw"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_alignBottom="@+id/send_image_to_chat"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="7dp"
+            android:layout_toEndOf="@+id/image_view_filter"
+            app:srcCompat="@drawable/icon_image_draw" />
+
+        <ImageView
+            android:id="@+id/image_view_text"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignBottom="@+id/send_image_to_chat"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="6dp"
+            android:layout_toEndOf="@+id/image_view_draw"
+            app:srcCompat="@drawable/icon_image_text" />
+
+        <ImageView
+            android:id="@+id/image_view_crop"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignBottom="@+id/send_image_to_chat"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="6dp"
+            android:layout_toEndOf="@+id/image_view_text"
+            app:srcCompat="@drawable/icon_image_crop" />
+
+        <ImageView
+            android:id="@+id/image_view_emoji"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignBottom="@+id/send_image_to_chat"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="6dp"
+            android:layout_toEndOf="@+id/image_view_crop"
+            app:srcCompat="@drawable/icon_image_emoji" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

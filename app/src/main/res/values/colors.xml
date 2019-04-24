@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#039be5</color>
+    <color name="colorPrimaryDark">#006db3</color>
+    <color name="colorAccent">#e64a19</color>
+    
+    <color name="tabLayoutColor">#ffffff</color>
+    <color name="editColor">#f5f5f5</color>
+
+    <color name="messageColor">#29b6f6</color>
+    <color name="darkBlue">#2196f3</color>
+    <color name="black">#000000</color>
+    <color name="grey">#e0e0e0</color>
+    <color name="Dgrey">#515151</color>
+    <color name="lightGrey">#efefef</color>
+    <color name="veryLightGrey">#f5f5f5</color>
+    <color name="messegeLighColor">#b3e5fc</color>
+    <color name="messageThemeColor">#eceff1</color>
+    <color name="blueGrey">#cfd8dc</color>
+    <color name="lightIndigo">#5c6bc0</color>
+    <color name="lightestIndigo">#7986cb</color>
+    <color name="Indigo">#3f51b5</color>
+
+</resources>

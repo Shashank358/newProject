@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    android:elevation="16dp"
+    app:cardBackgroundColor="@color/tabLayoutColor"
+    app:cardCornerRadius="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/feed_user_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:src="@drawable/avatar" />
+
+        <TextView
+            android:id="@+id/feed_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="16dp"
+            android:layout_toEndOf="@+id/feed_user_image"
+            android:text="UserName"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/feed_user_timeAgo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/feed_user_name"
+            android:layout_marginStart="25dp"
+            android:layout_marginBottom="16dp"
+            android:layout_toEndOf="@+id/feed_user_image"
+            android:text="time Ago"
+            android:textSize="12sp" />
+
+        <View
+            android:id="@+id/view5"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_below="@+id/feed_user_timeAgo"
+            android:layout_marginTop="10dp"
+            android:background="@color/lightGrey"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/feed_info_relative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view5"
+            android:layout_marginBottom="5dp"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/feed_post_see_more_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/feed_user_text_post_relative"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="false"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="11dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:text="See more"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/feed_user_text_post_relative"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/feed_user_texted_post"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="6"
+                    android:paddingStart="16dp"
+                    android:paddingTop="3dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="3dp"
+                    android:text="say something here..."
+                    android:textColor="@color/Dgrey"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <VideoView
+            android:id="@+id/feed_user_video_post"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/feed_comment_view"
+            android:layout_below="@+id/feed_info_relative"
+            android:background="@drawable/attach_dialog_background"
+            android:visibility="visible" />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/feed_user_post_cardview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/feed_info_relative"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="5dp"
+            android:visibility="visible"
+            app:cardBackgroundColor="@color/tabLayoutColor">
+
+            <ImageView
+                android:id="@+id/feed_user_post"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:fitsSystemWindows="false"
+                android:focusableInTouchMode="false"
+                android:maxHeight="550dp"
+                android:scaleType="centerCrop"
+                android:visibility="visible"
+                app:srcCompat="@drawable/sample_13" />
+
+            <ProgressBar
+                android:id="@+id/posting_progress"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+
+        </android.support.v7.widget.CardView>
+
+
+        <ImageView
+            android:id="@+id/feed_user_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/feed_user_timeAgo"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="10dp"
+            app:srcCompat="@drawable/ic_more_vert_black_24dp" />
+
+        <ImageView
+            android:id="@+id/feed_like_view"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/feed_user_post_cardview"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            app:srcCompat="@drawable/icons8_two_hearts" />
+
+        <ImageView
+            android:id="@+id/feed_comment_view"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_below="@+id/feed_user_post_cardview"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="false"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="65dp"
+            android:layout_marginBottom="10dp"
+            app:srcCompat="@drawable/icons8_comment_bubble" />
+
+        <ImageView
+            android:id="@+id/feed_share_view"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_below="@+id/feed_user_post_cardview"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toStartOf="@+id/feed_comment_view"
+            app:srcCompat="@drawable/icons8_share_arrow" />
+
+        <ImageView
+            android:id="@+id/feed_like_color_view"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/feed_user_post_cardview"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            android:visibility="gone"
+            app:srcCompat="@drawable/icons8_two_heartsa_red" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/feed_user_post_cardview"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="false"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@drawable/icons8_downloading" />
+
+        <TextView
+            android:id="@+id/feed_posts_likes_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/feed_comment_view"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:text="No Likes"
+            android:textColor="@color/black"
+            android:textStyle="normal" />
+
+        <RelativeLayout
+            android:id="@+id/like_and_comment_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/feed_share_view"
+            android:layout_alignParentStart="false"
+            android:layout_marginBottom="16dp"
+            android:paddingStart="15dp">
+
+            <TextView
+                android:id="@+id/feed_user_comments_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:text="No Comments"
+                android:textColor="@color/Dgrey"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view_after_like"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_below="@+id/like_and_comment_box"
+            android:layout_marginTop="5dp"
+            android:background="@color/lightGrey"
+            android:visibility="gone" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/feed_post_user_comments_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/view_after_like"
+            android:visibility="gone">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/feed_post_user_comments_list"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:visibility="gone">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/user_comment_profile_image"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/avatar" />
+
+            <EditText
+                android:id="@+id/feed_user_editable_comments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_toEndOf="@+id/user_comment_profile_image"
+                android:background="@drawable/chat_box_background"
+                android:hint="Comment Here..."
+                android:paddingStart="10dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="50dp"
+                android:paddingBottom="5dp" />
+
+            <ImageView
+                android:id="@+id/feed_user_comment_send_image"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="16dp"
+                android:tint="@color/colorPrimaryDark"
+                android:visibility="gone"
+                app:srcCompat="@drawable/ic_send_black_24dp" />
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

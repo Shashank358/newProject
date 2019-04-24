@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/feed_comments_single_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/post_single_commenter_image"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:src="@drawable/avatar" />
+
+
+    <TextView
+        android:id="@+id/post_single_commenter_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentTop="false"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="1dp"
+        android:layout_toEndOf="@+id/post_single_commenter_image"
+        android:text="User Name"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/post_single_comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/post_single_commenter_name"
+        android:layout_alignStart="@+id/post_single_commenter_name"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="2dp"
+        android:text="comment here" />
+
+
+    <ImageView
+        android:id="@+id/comment_like_color_view"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="21dp"
+        android:src="@drawable/icons8_two_heartsa_red"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/comment_unlike_view"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/icons8_two_hearts" />
+
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="24dp"
+        android:layout_below="@+id/post_single_commenter_image"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/grey" />
+
+
+</RelativeLayout>

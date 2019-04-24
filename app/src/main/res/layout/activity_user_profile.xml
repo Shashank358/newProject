@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_profile"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tabLayoutColor"
+    app:layout_behavior="android.support.design.widget.BottomSheetBehavior"
+    tools:context=".Fragment.Fragment3">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/profile_toolbar_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </android.support.v7.widget.Toolbar>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/profile_constraint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profile_toolbar_main"
+            android:layout_alignParentStart="false"
+            android:layout_alignParentTop="false">
+
+            <ImageView
+                android:id="@+id/user_cover_image"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@color/editColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/avatar_circle_image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="16dp"
+                android:elevation="8dp"
+                android:src="@drawable/avatar"
+                app:civ_border_color="@color/tabLayoutColor"
+                app:civ_border_width="3dp"
+                app:civ_circle_background_color="@android:color/background_light"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+            <TextView
+                android:id="@+id/profile_posts_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/edit_profile_background"
+                android:paddingStart="8dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="5dp"
+                android:text="Posts"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toStartOf="@+id/profile_followers_text"
+                app:layout_constraintStart_toEndOf="@+id/avatar_circle_image"
+                app:layout_constraintTop_toBottomOf="@+id/user_cover_image" />
+
+            <TextView
+                android:id="@+id/profile_followers_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_profile_background"
+                android:paddingStart="8dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="5dp"
+                android:text="Friends"
+                android:textAlignment="center"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/profile_posts_text"
+                app:layout_constraintTop_toTopOf="@+id/profile_posts_text" />
+
+            <ImageView
+                android:id="@+id/profile_cover_camera_image"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
+                android:padding="5dp"
+                android:src="@drawable/ic_camera_alt_black_24dp"
+                app:layout_constraintBottom_toBottomOf="@+id/user_cover_image"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.9"
+                app:layout_constraintStart_toEndOf="@+id/profile_followers_text" />
+
+            <ImageView
+                android:id="@+id/profile_camera_image"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/attach_dialog_background"
+                android:elevation="8dp"
+                android:padding="5dp"
+                android:src="@drawable/ic_camera_alt_black_24dp"
+                app:layout_constraintBottom_toBottomOf="@+id/avatar_circle_image"
+                app:layout_constraintEnd_toEndOf="@+id/avatar_circle_image"
+                app:layout_constraintTop_toTopOf="@+id/avatar_circle_image"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/posts_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="posts count"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/profile_posts_text"
+                app:layout_constraintStart_toStartOf="@+id/profile_posts_text"
+                app:layout_constraintTop_toBottomOf="@+id/profile_posts_text" />
+
+            <TextView
+                android:id="@+id/friends_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="friends count"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/profile_followers_text"
+                app:layout_constraintStart_toStartOf="@+id/profile_followers_text"
+                app:layout_constraintTop_toBottomOf="@+id/profile_followers_text" />
+
+            <View
+                android:id="@+id/view6"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginStart="150dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/lightGrey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/avatar_circle_image"
+                app:layout_constraintTop_toBottomOf="@+id/posts_count" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/follow_following_relative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profile_constraint">
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="UserName"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/user_college_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:maxWidth="350dp"
+                android:maxLines="2"
+                android:text="User College Name"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/user_name" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <RelativeLayout
+            android:id="@+id/bio_relative"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/follow_following_relative"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="false"
+                android:layout_marginTop="7dp"
+                android:text="Edit Bio"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp"
+                android:textStyle="normal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView"
+                android:layout_alignParentBottom="false"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:maxWidth="275dp"
+                android:maxHeight="150dp"
+                android:text="your bio details will be there and you can edit here as per user convinient"
+                android:textAlignment="center" />
+
+        </RelativeLayout>
+
+
+        <View
+            android:id="@+id/view4"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_below="@+id/bio_relative"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/grey"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RelativeLayout
+            android:id="@+id/follow_btn_relative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view4">
+
+            <TextView
+                android:id="@+id/profile_follow_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_character_background"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="8dp"
+                android:text="Follow"
+                android:textColor="@color/tabLayoutColor"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/profile_message_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="29dp"
+                android:layout_toEndOf="@+id/profile_follow_btn"
+                android:text="Message" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/posts_friends_feed_relative"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/follow_btn_relative">
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/profile_tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/tabs_background"
+                app:tabIndicatorHeight="0dp">
+
+            </android.support.design.widget.TabLayout>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/profile_pager"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:layout_below="@+id/profile_tabs"
+                android:layout_alignParentBottom="false">
+
+            </android.support.v4.view.ViewPager>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</android.support.v4.widget.NestedScrollView>

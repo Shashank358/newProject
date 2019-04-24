@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/user_single_req_image"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/avatar" />
+
+    <TextView
+        android:id="@+id/user_single_req_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="12dp"
+        android:layout_toStartOf="@+id/frag2_user_single_follow_text"
+        android:maxWidth="200dp"
+        android:text="UserName"
+        android:textColor="@android:color/background_dark"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/user_single_req_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView12"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="5dp"
+        android:maxLines="1"
+        android:text="College Name"
+        android:textColor="@color/Dgrey"
+        android:textSize="13sp"
+        android:visibility="visible" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_below="@+id/user_single_req_status"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="2dp"
+        android:background="@android:color/darker_gray"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/frag2_user_single_follow_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/user_single_follow_background"
+        android:paddingLeft="16dp"
+        android:paddingTop="5dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="5dp"
+        android:text="Follow"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:visibility="visible" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_on"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_below="@+id/user_single_req_name"
+        android:layout_alignEnd="@+id/user_single_req_image"
+        android:layout_marginTop="6dp"
+        android:src="@drawable/ic_online_green_24dp"
+        android:visibility="gone"
+        app:civ_circle_background_color="@android:color/background_light" />
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_off"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_below="@+id/user_single_req_name"
+        android:layout_alignEnd="@+id/user_single_req_image"
+        android:layout_alignBottom="@+id/user_single_req_image"
+        android:layout_marginTop="6dp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_single_req_name"
+        android:layout_alignStart="@+id/user_single_req_name"
+        android:layout_marginStart="0dp"
+        android:layout_toStartOf="@+id/frag2_user_single_follow_text"
+        android:text="User_id"
+        android:textSize="14sp"
+        android:textStyle="italic" />
+
+
+</RelativeLayout>
